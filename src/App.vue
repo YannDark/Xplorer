@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" >
+    <b-nav justified fill tabs>
+      <b-nav-item class="bg-success" active>Accueil</b-nav-item>
+      <b-nav-item>Carte</b-nav-item>
+      <b-nav-item>F.A.Q.</b-nav-item>
+      <b-nav-item >Contact</b-nav-item>
+    </b-nav>
+    <!--<img alt="Vue logo" src="./assets/logo.png">-->
+    <GoogleMap />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GoogleMap from './components/GoogleMap.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    GoogleMap
   }
 }
 </script>
 
 <style>
+html, body, #app {
+  height: 100%;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
